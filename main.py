@@ -20,7 +20,7 @@ def restart():
     restart = input("Would you like to restart? (y/n)   ")
     if restart == "y":
         main()
-    else if restart == "n":
+    elif restart == "n":
         exit
     else:
         print("Thanks for using DataHive")

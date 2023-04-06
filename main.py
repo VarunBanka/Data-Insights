@@ -5,7 +5,7 @@ print("This software is made by Varun Banka \n")
 
 
 def main():
-    file = input("Enter the path of csv file: ")
+    file = input("Enter the name of csv file: ")
 
     try:
         df = pd.read_csv(file)
@@ -20,6 +20,8 @@ def restart():
     restart = input("Would you like to restart? (y/n)   ")
     if restart == "y":
         main()
+    else if restart == "n":
+        exit
     else:
         print("Thanks for using DataHive")
         exit

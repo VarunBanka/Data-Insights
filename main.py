@@ -22,7 +22,7 @@ def restart():
         main()
     else:
         print("Thanks for using DataHive")
-        break
+        exit
 
 
 try:

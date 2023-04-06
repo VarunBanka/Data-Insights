@@ -1,4 +1,4 @@
-# Data Insights: Because data is boring without us!
+# Data Insights
 
 Data Insights is a user-friendly tool for analyzing large CSV files. Its advanced analytics helps uncover hidden patterns and trends, making it perfect for data scientists and analysts.
 
@@ -18,7 +18,7 @@ Common sense & a working brain 🧠
 
 To get started :
 
-<a href="https://github.com/VarunBanka/Data-Insights">Download the software and extract it.</a>
+<a href="https://github.com/VarunBanka/Data-Insights/archive/refs/heads/main.zip">Download the software and extract it.</a>
 
 Make sure your CSV file and main.py are in the same directory.
 

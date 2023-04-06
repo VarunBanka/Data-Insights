@@ -31,6 +31,9 @@ Follow the on-screen instructions.
 
 Check out our sample video below to see how to use this tool:
 
-![image](https://user-images.githubusercontent.com/88031057/230408614-5dcf3abb-50ab-42de-b8ec-d962b461e5d6.png)
+https://user-images.githubusercontent.com/88031057/230418976-cbc11945-ab3f-4d31-b536-c9dbcadac437.mp4
 
-jk, the video is coming soon
+
+## Contribution
+
+If you would like to contribute on this project, you can make changes in the project and then start a pull request.

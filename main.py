@@ -1,6 +1,6 @@
 import os
 
-print("--------------- DataHive --------------- \n")
+print("--------------- DaTa Insights --------------- \n")
 print("This software is made by Varun Banka \n")
 
 

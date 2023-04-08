@@ -1,11 +1,13 @@
-import os
+import os  # this module is being used in line 38 so dont remove it
 
 print("--------------- DaTa Insights --------------- \n")
 print("This software is made by Varun Banka \n")
+print("Loading......\n")
 
 
-def main():
-    file = input("Enter the name of csv file: ")
+def mainApp():    # the code starts executing from line 30
+    file = input("Enter the name of csv file (without extension) : ")
+    file = file + ".csv"
 
     try:
         df = pd.read_csv(file)
@@ -13,28 +15,31 @@ def main():
         profile.to_file(output_file="report.html")
 
     except Exception as e:
+        # code by Varun Banka
         print(f"Error: {e}")
 
-# code by Varun Banka
-def restart():
+
+def restart():  # this func is for restarting the software
     restart = input("Would you like to restart? (y/n)   ")
     if restart == "y":
-        main()
+        mainApp()
     elif restart == "n":
-        exit
+        exit()
     else:
         print("Thanks for using DataHive")
-        exit
+        exit()
 
 
 try:
     import pandas as pd
     from ydata_profiling import ProfileReport
-    main()
+    mainApp()
+
     while (True):
         restart()
 
-except ImportError:
+
+except ImportError:  # idk if the following code is required but i dont wanna remove it ffs
     install_dependencies = input(
         "Some dependencies aren't installed. Would you like to install them? (y/n) ")
     if install_dependencies.lower() == "y":
@@ -44,7 +49,7 @@ except ImportError:
             os.system("clear")
             import pandas as pd
             from ydata_profiling import ProfileReport
-            main()
+            mainApp()
 
             while (True):
                 restart()
@@ -52,18 +57,11 @@ except ImportError:
         except Exception as e:
             print(f"Error: {e}")
             input("Press any key to exit...")
-            exit
+            exit()
 
     else:
-        input("Press any key to exit...")
-        exit
-
-
-
-
-
-
-
+        input("Apart from power key, press any key to exit...")
+        exit()
 
 
 

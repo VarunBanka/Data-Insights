@@ -1,13 +1,24 @@
-import os  # this module is being used in line 38 so dont remove it
+import os
 
 print("--------------- DaTa Insights --------------- \n")
 print("This software is made by Varun Banka \n")
 print("Loading......\n")
 
 
-def mainApp():    # the code starts executing from line 30
-    file = input("Enter the name of csv file (without extension) : ")
-    file = file + ".csv"
+def mainApp(): # dont read this, read from line 43
+
+"""
+the following block of code, takes the input value from the command, for example:
+main.py test
+here test is the input 
+"""
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input", help="Enter the name of csv file (without extension) : ")
+    # code by Varun Banka
+    args = parser.parse_args()
+    input_value = args.input
+    input_value = input_value + ".csv"
 
     try:
         df = pd.read_csv(file)
@@ -21,7 +32,7 @@ def mainApp():    # the code starts executing from line 30
 
 def restart():  # this func is for restarting the software
     restart = input("Would you like to restart? (y/n)   ")
-    if restart == "y":
+    if restart == "y" or restart == "Y":
         mainApp()
     elif restart == "n":
         exit()
@@ -33,11 +44,11 @@ def restart():  # this func is for restarting the software
 try:
     import pandas as pd
     from ydata_profiling import ProfileReport
+    import argparse
     mainApp()
 
     while (True):
         restart()
-
 
 except ImportError:  # idk if the following code is required but i dont wanna remove it ffs
     install_dependencies = input(
@@ -46,6 +57,7 @@ except ImportError:  # idk if the following code is required but i dont wanna re
         try:
             os.system("pip install pandas")
             os.system("pip install ydata-profiling")
+            os.system("pip install argparse")
             os.system("clear")
             import pandas as pd
             from ydata_profiling import ProfileReport
@@ -54,6 +66,7 @@ except ImportError:  # idk if the following code is required but i dont wanna re
             while (True):
                 restart()
 
+        # code by Varun Banka
         except Exception as e:
             print(f"Error: {e}")
             input("Press any key to exit...")
@@ -62,8 +75,3 @@ except ImportError:  # idk if the following code is required but i dont wanna re
     else:
         input("Apart from power key, press any key to exit...")
         exit()
-
-
-
-
-# code by Varun Banka

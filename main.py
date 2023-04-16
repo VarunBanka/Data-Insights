@@ -7,21 +7,15 @@ print("Loading......\n")
 
 def mainApp(): # dont read this, read from line 43
 
-"""
-the following block of code, takes the input value from the command, for example:
-main.py test
-here test is the input 
-"""
-
     parser = argparse.ArgumentParser()
     parser.add_argument("input", help="Enter the name of csv file (without extension) : ")
-    # code by Varun Banka
     args = parser.parse_args()
     input_value = args.input
     input_value = input_value + ".csv"
 
     try:
-        df = pd.read_csv(file)
+        df = pd.read_csv(input_value)
+        # code by Varun Banka
         profile = ProfileReport(df, minimal=True)
         profile.to_file(output_file="report.html")
 
@@ -66,12 +60,12 @@ except ImportError:  # idk if the following code is required but i dont wanna re
             while (True):
                 restart()
 
-        # code by Varun Banka
         except Exception as e:
             print(f"Error: {e}")
             input("Press any key to exit...")
             exit()
 
     else:
+         # code by Varun Banka
         input("Apart from power key, press any key to exit...")
         exit()

@@ -22,17 +22,12 @@ To get started :
 
 Make sure your CSV file and main.py are in the same directory.
 
-Open the main.py file.
-
-Follow the on-screen instructions.
+Open terminal and type:
 
 
-## Sample
-
-Check out our sample video below to see how to use this tool:
-
-https://user-images.githubusercontent.com/88031057/230418976-cbc11945-ab3f-4d31-b536-c9dbcadac437.mp4
-
+``` shell
+python main.py filename
+```
 
 ## Contribution
 
